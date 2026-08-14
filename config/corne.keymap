@@ -199,13 +199,6 @@
     };
 
     behaviors {
-        BetterWin: BetterWin {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BETTERWIN";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_WIN>, <&kp LEFT_WIN>;
-        };
-
         TDExplamQuest: TDExplamQuest {
             compatible = "zmk,behavior-tap-dance";
             label = "TDEXPLAMQUEST";
@@ -312,6 +305,34 @@
 
             tapping-term-ms = <400>;
         };
+
+        FuncLayerR: FuncLayerR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FUNCLAYERR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
+        };
+
+        FuncLayerL: FuncLayerL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FUNCLAYERL";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <39 40 41 30 18 6 7 19 31 32 20 8 9 10 11 21 22 23 33 34 35>;
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -319,10 +340,10 @@
 
         main {
             bindings = <
-&trans         &kp Q                &kp W               &kp E                 &kp R                   &kp T    &kp Y  &kp U             &kp I                  &kp O            &TDQuotes              &kp BACKSPACE
-&kp BACKSPACE  &HRLeft LEFT_META A  &HRLeft LEFT_ALT S  &HRLeft LEFT_SHIFT D  &HRLeft LEFT_CONTROL F  &kp G    &kp H  &HRRight RCTRL J  &HRRight LEFT_SHIFT K  &HRRight RALT L  &HRRight RIGHT_META P  &kp ENTER
-&trans         &kp Z                &kp X               &kp C                 &kp V                   &kp B    &kp N  &kp M             &TDcommaSemiColon      &TDPeriodColon   &TDQuestionExclam      &trans
-                                                        &kp LEFT_WIN          &kp SPACE               &mo 1    &sl 1  &sk RIGHT_SHIFT   &sl 2
+&trans         &kp Q                &kp W               &kp E                   &kp R                   &kp T    &kp Y  &kp U             &kp I                  &kp O            &TDQuotes              &kp BACKSPACE
+&kp BACKSPACE  &HRLeft LEFT_META A  &HRLeft LEFT_ALT S  &HRLeft LEFT_SHIFT D    &HRLeft LEFT_CONTROL F  &kp G    &kp H  &HRRight RCTRL J  &HRRight LEFT_SHIFT K  &HRRight RALT L  &HRRight RIGHT_META P  &kp ENTER
+&trans         &kp Z                &kp X               &kp C                   &kp V                   &kp B    &kp N  &kp M             &TDcommaSemiColon      &TDPeriodColon   &TDQuestionExclam      &trans
+                                                        &FuncLayerL 2 LEFT_WIN  &kp SPACE               &mo 1    &sl 1  &sk RIGHT_SHIFT   &FuncLayerR 2 ENTER
             >;
         };
 
