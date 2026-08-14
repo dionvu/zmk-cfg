@@ -27,13 +27,6 @@
     };
 
     behaviors {
-        TDcolons: TDcolons {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDCOLONS";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp COLON>;
-        };
-
         TDComPer: TDComPer {
             compatible = "zmk,behavior-tap-dance";
             label = "TDCOMPER";
