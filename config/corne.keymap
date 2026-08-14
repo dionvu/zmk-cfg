@@ -282,6 +282,8 @@
             label = "TDCOMMASEMICOLON";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
+
+            tapping-term-ms = <400>;
         };
 
         TDPeriodColon: TDPeriodColon {
@@ -289,6 +291,8 @@
             label = "TDPERIODCOLON";
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
+
+            tapping-term-ms = <400>;
         };
 
         TDQuestionExclam: TDQuestionExclam {
@@ -296,6 +300,8 @@
             label = "TDQUESTIONEXCLAM";
             #binding-cells = <0>;
             bindings = <&kp QUESTION>, <&kp EXCL>;
+
+            tapping-term-ms = <400>;
         };
 
         TDQuotes: TDQuotes {
@@ -303,6 +309,8 @@
             label = "TDQUOTES";
             #binding-cells = <0>;
             bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+
+            tapping-term-ms = <400>;
         };
     };
 
