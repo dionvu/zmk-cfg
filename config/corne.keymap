@@ -1,0 +1,105 @@
+/*
+ * Copyright 2024 Michał Minarowski (@n3oney)
+ * 
+ * Originally created for QMK by Mark Stosberg (@markstos)
+ * 
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        EscJK {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 20>;
+        };
+    };
+
+    behaviors {
+        TDcolons: TDcolons {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDCOLONS";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp COLON>;
+        };
+
+        TDComPer: TDComPer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDCOMPER";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp PERIOD>;
+        };
+
+        TDLTGT: TDLTGT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDLTGT";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+        };
+
+        TDquotes: TDquotes {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDQUOTES";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+        };
+
+        TDGraveTil: TDGraveTil {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDGRAVETIL";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+        };
+
+        TDMinusUnd: TDMinusUnd {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDMINUSUND";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+        };
+
+        TDPlusEq: TDPlusEq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDPLUSEQ";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        colemak_dh {
+            bindings = <
+&kp TAB        &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y  &kp U            &kp I      &kp O    &kp P      &kp ESCAPE
+&kp BACKSPACE  &kp A  &kp S  &kp D         &kp F      &kp G    &kp H  &kp J            &kp K      &kp L    &TDcolons  &kp ENTER
+&sk LCTRL      &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N  &kp M            &TDComPer  &TDLTGT  &kp SLASH  &sk RIGHT_ALT
+                             &sk LEFT_WIN  &kp SPACE  &mo 1    &sl 1  &sk RIGHT_SHIFT  &sl 2
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+&TDGraveTil  &kp EXCLAMATION  &kp AT_SIGN   &kp POUND     &kp DOLLAR        &kp PERCENT       &kp CARET        &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans       &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5      &kp NUMBER_6     &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &trans
+&trans       &trans           &kp TILDE     &kp GRAVE     &kp LEFT_BRACKET  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &TDMinusUnd   &TDPlusEq             &trans                 &trans
+                                            &kp LEFT_WIN  &sk LEFT_SHIFT    &trans            &trans           &sk RIGHT_SHIFT    &trans
+            >;
+        };
+
+        function_layer {
+            bindings = <
+&trans      &kp F6        &kp F7        &kp F8        &kp F9   &kp F10    &kp K_PREV      &kp K_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT  &kp K_MUTE  &trans
+&trans      &kp F1        &kp F2        &kp F3        &kp F4   &kp F5     &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT   &trans      &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp F11  &kp F12    &trans          &trans             &trans           &trans      &trans      &kp PRINTSCREEN
+                                        &trans        &trans   &trans     &trans          &trans             &trans
+            >;
+        };
+    };
+};
