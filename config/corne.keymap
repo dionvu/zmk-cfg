@@ -178,13 +178,6 @@
     };
 
     behaviors {
-        TDExplamQuest: TDExplamQuest {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDEXPLAMQUEST";
-            #binding-cells = <0>;
-            bindings = <&kp EXCL>, <&kp QUESTION>;
-        };
-
         HRLeft: HRLeft {
             compatible = "zmk,behavior-hold-tap";
             label = "HRLEFT";
@@ -247,42 +240,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        TDcommaSemiColon: TDcommaSemiColon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDCOMMASEMICOLON";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
-            tapping-term-ms = <400>;
-        };
-
-        TDPeriodColon: TDPeriodColon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDPERIODCOLON";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
-
-            tapping-term-ms = <400>;
-        };
-
-        TDQuestionExclam: TDQuestionExclam {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDQUESTIONEXCLAM";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION>, <&kp EXCL>;
-
-            tapping-term-ms = <400>;
-        };
-
-        TDQuotes: TDQuotes {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDQUOTES";
-            #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
-
-            tapping-term-ms = <400>;
         };
 
         FuncLayerR: FuncLayerR {
@@ -348,6 +305,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        LongPress: LongPress {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LONGPRESS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -355,10 +322,10 @@
 
         main {
             bindings = <
-&trans  &kp Q                &kp W               &kp E                   &kp R                   &kp T    &kp Y  &kp U             &kp I                  &kp O            &MMQuotes              &trans
-&trans  &HRLeft LEFT_META A  &HRLeft LEFT_ALT S  &HRLeft LEFT_SHIFT D    &HRLeft LEFT_CONTROL F  &kp G    &kp H  &HRRight RCTRL J  &HRRight LEFT_SHIFT K  &HRRight RALT L  &HRRight RIGHT_META P  &trans
-&trans  &kp Z                &kp X               &kp C                   &kp V                   &kp B    &kp N  &kp M             &MMcommaSemi           &MMPeriodColon   &MMExclamQuest         &trans
-                                                 &FuncLayerL 2 LEFT_WIN  &kp SPACE               &mo 1    &sl 1  &sk RIGHT_SHIFT   &FuncLayerR 2 ENTER
+&trans  &kp Q                &kp W               &kp E                   &kp R                   &LongPress LC(T) T    &LongPress LC(Y) Y  &kp U             &kp I                  &kp O            &MMQuotes              &trans
+&trans  &HRLeft LEFT_META A  &HRLeft LEFT_ALT S  &HRLeft LEFT_SHIFT D    &HRLeft LEFT_CONTROL F  &kp G                 &kp H               &HRRight RCTRL J  &HRRight LEFT_SHIFT K  &HRRight RALT L  &HRRight RIGHT_META P  &trans
+&trans  &LongPress LC(Z) Z   &LongPress LC(X) X  &LongPress LC(C) C      &LongPress LC(V) V      &kp B                 &kp N               &kp M             &MMcommaSemi           &MMPeriodColon   &MMExclamQuest         &trans
+                                                 &FuncLayerL 2 LEFT_WIN  &kp SPACE               &mo 1                 &sl 1               &sk RIGHT_SHIFT   &FuncLayerR 2 ENTER
             >;
         };
 
