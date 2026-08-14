@@ -19,6 +19,51 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+        };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <18 30>;
+        };
+
+        caret {
+            bindings = <&kp CARET>;
+            key-positions = <6 18>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <7 19>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <19 31>;
+        };
+
+        asterik {
+            bindings = <&kp ASTERISK>;
+            key-positions = <20 8>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <20 32>;
+        };
+
+        ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <9 21>;
+        };
+
+        vbar {
+            bindings = <&kp PIPE>;
+            key-positions = <22 34>;
+        };
     };
 
     behaviors {
