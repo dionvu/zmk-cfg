@@ -98,7 +98,7 @@
             bindings = <
 &kp TAB        &kp Q  &kp W  &kp E       &kp R      &kp T    &kp Y  &kp U            &kp I      &kp O    &kp P      &kp SLASH
 &kp BACKSPACE  &kp A  &kp S  &kp D       &kp F      &kp G    &kp H  &kp J            &kp K      &kp L    &TDcolons  &kp ENTER
-&sk LCTRL      &kp Z  &kp X  &kp C       &kp V      &kp B    &kp N  &kp M            &TDComPer  &TDLTGT  &kp RCTRL  &sk RIGHT_ALT
+&sk LCTRL      &kp Z  &kp X  &kp C       &kp V      &kp B    &kp N  &kp M            &TDComPer  &TDLTGT  &sk RCTRL  &sk RIGHT_ALT
                              &BetterWin  &kp SPACE  &mo 1    &sl 1  &sk RIGHT_SHIFT  &sl 2
             >;
         };
