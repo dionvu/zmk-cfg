@@ -114,14 +114,14 @@
         };
 
         Copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <26 27>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
         Paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LC(V)>;
             key-positions = <27 28>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -135,7 +135,7 @@
         };
 
         Cut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp LC(X)>;
             key-positions = <28 26>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
