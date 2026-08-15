@@ -87,14 +87,14 @@
         };
 
         LBrackets {
-            bindings = <&TDBracketsL>;
+            bindings = <&LBrackets>;
             key-positions = <31 32>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
         RBrackets {
-            bindings = <&TDBracketsR>;
+            bindings = <&RBrackets>;
             key-positions = <33 32>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -286,7 +286,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         TDEclaimationQuestion: TDEclaimationQuestion {
@@ -295,7 +295,7 @@
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION>, <&kp RS(QUESTION)>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         TDPeriodColon: TDPeriodColon {
@@ -304,7 +304,7 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         TDQuotes: TDQuotes {
@@ -313,25 +313,7 @@
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
 
-            tapping-term-ms = <250>;
-        };
-
-        TDBracketsL: TDBracketsL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDBRACKETSL";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>;
-
-            tapping-term-ms = <250>;
-        };
-
-        TDBracketsR: TDBracketsR {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDBRACKETSR";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
-
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
     };
 
