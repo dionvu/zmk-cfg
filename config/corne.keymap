@@ -325,16 +325,25 @@
 &trans  &kp Q               &kp W               &kp E                    &kp R                   &LongPress LC(T) T     &LongPress LC(Y) Y  &kp U             &kp I                  &kp O             &MMQuotes             &trans
 &trans  &HRLeft LEFT_ALT A  &HRLeft LEFT_WIN S  &HRLeft LEFT_SHIFT D     &HRLeft LEFT_CONTROL F  &kp G                  &kp H               &HRRight RCTRL J  &HRRight LEFT_SHIFT K  &HRRight RMETA L  &HRRight RIGHT_ALT P  &trans
 &trans  &LongPress LC(Z) Z  &LongPress LC(X) X  &LongPress LC(C) C       &LongPress LC(V) V      &kp B                  &kp N               &kp M             &MMcommaSemi           &MMPeriodColon    &MMExclamQuest        &trans
-                                                &FuncLayerL 2 BACKSPACE  &kp SPACE               &FuncLayerL 1 ENTER    &sl 1               &sk RIGHT_SHIFT   &FuncLayerR 2 ESC
+                                                &FuncLayerL 3 BACKSPACE  &kp SPACE               &FuncLayerL 1 ENTER    &sl 1               &sk RIGHT_SHIFT   &FuncLayerR 3 ESC
             >;
         };
 
-        nav {
+        num {
             bindings = <
-&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans    &trans           &trans        &trans     &trans  &trans
-&trans  &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &kp LEFT  &kp DOWN         &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp N7        &kp N8        &kp N9        &trans    &trans    &trans           &trans        &trans     &trans  &trans
-                              &kp LEFT_WIN  &trans        &trans    &trans    &sk RIGHT_SHIFT  &trans
+&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N7        &kp N8        &kp N9        &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans    &trans     &trans          &trans     &trans    &trans    &trans    &trans        &trans     &trans  &trans
+&trans  &kp LALT  &kp LMETA  &kp LEFT_SHIFT  &kp LCTRL  &trans    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans    &trans     &trans          &trans     &trans    &trans    &trans    &trans        &trans     &trans  &trans
+                             &trans          &trans     &trans    &trans    &trans    &trans
             >;
         };
 
