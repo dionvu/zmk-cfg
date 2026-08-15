@@ -286,7 +286,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         TDEclaimationQuestion: TDEclaimationQuestion {
@@ -295,7 +295,7 @@
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION>, <&kp RS(QUESTION)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         TDPeriodColon: TDPeriodColon {
@@ -304,7 +304,7 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
 
         TDQuotes: TDQuotes {
@@ -313,7 +313,7 @@
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
     };
 
