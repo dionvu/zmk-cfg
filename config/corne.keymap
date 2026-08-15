@@ -191,7 +191,7 @@
         LBrackets: LBrackets {
             compatible = "zmk,behavior-mod-morph";
             label = "LBRACKETS";
-            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
+            bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -200,7 +200,7 @@
         RBrackets: RBrackets {
             compatible = "zmk,behavior-mod-morph";
             label = "RBRACKETS";
-            bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_BRACKET>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
