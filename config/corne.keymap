@@ -285,13 +285,8 @@
             label = "TDCOMMASEMIC";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
-        };
 
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
+            tapping-term-ms = <350>;
         };
 
         TDEclaimationQuestion: TDEclaimationQuestion {
@@ -299,6 +294,8 @@
             label = "TDECLAIMATIONQUESTION";
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION>, <&kp RS(QUESTION)>;
+
+            tapping-term-ms = <350>;
         };
 
         TDPeriodColon: TDPeriodColon {
@@ -306,6 +303,8 @@
             label = "TDPERIODCOLON";
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
+
+            tapping-term-ms = <300>;
         };
     };
 
