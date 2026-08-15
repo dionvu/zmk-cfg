@@ -286,7 +286,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
 
         TDEclaimationQuestion: TDEclaimationQuestion {
@@ -295,7 +295,7 @@
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION>, <&kp RS(QUESTION)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
 
         TDPeriodColon: TDPeriodColon {
@@ -304,7 +304,7 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
 
         TDQuotes: TDQuotes {
@@ -313,7 +313,7 @@
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
 
         TDBracketsL: TDBracketsL {
@@ -321,6 +321,8 @@
             label = "TDBRACKETSL";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>;
+
+            tapping-term-ms = <250>;
         };
 
         TDBracketsR: TDBracketsR {
@@ -328,6 +330,8 @@
             label = "TDBRACKETSR";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
+
+            tapping-term-ms = <250>;
         };
     };
 
