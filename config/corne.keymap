@@ -61,7 +61,7 @@
             key-positions = <17 16>;
         };
 
-        pipe {
+        pipetuah {
             bindings = <&kp DOLLAR>;
             key-positions = <27 26>;
         };
@@ -71,7 +71,7 @@
             key-positions = <28 27>;
         };
 
-        endofgodlike {
+        endofgodlike4 {
             bindings = <&kp ASTERISK>;
             key-positions = <29 28>;
         };
