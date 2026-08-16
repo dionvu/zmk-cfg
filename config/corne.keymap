@@ -18,50 +18,120 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
+            key-positions = <35 23>;
             require-prior-idle-ms = <150>;
             timeout-ms = <50>;
         };
 
         percent {
-            bindings = <&kp MINUS>;
-            key-positions = <16 17>;
+            bindings = <&LParLT>;
+            key-positions = <2 3>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
         dollar {
-            bindings = <&kp ASTERISK>;
-            key-positions = <28 29>;
+            bindings = <&RParGT>;
+            key-positions = <4 3>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
         equals {
             bindings = <&kp EQUAL>;
-            key-positions = <16 15>;
+            key-positions = <5 4>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
         hashtag {
-            bindings = <&kp POUND>;
+            bindings = <&kp UNDER>;
             key-positions = <15 14>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
         pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <14 13>;
+            bindings = <&kp EQUAL>;
+            key-positions = <16 15>;
         };
 
         grave {
+            bindings = <&kp MINUS>;
+            key-positions = <17 16>;
+        };
+
+        pipe {
+            bindings = <&kp DOLLAR>;
+            key-positions = <27 26>;
+        };
+
+        endofgodlike {
+            bindings = <&kp HASH>;
+            key-positions = <28 27>;
+        };
+
+        endofgodlike {
+            bindings = <&kp ASTERISK>;
+            key-positions = <29 28>;
+        };
+
+        plus {
+            bindings = <&kp AT>;
+            key-positions = <6 7>;
+        };
+
+        minus {
+            bindings = <&LBrackets>;
+            key-positions = <8 7>;
+        };
+
+        atsym {
+            bindings = <&RBrackets>;
+            key-positions = <9 8>;
+        };
+
+        mult {
+            bindings = <&kp AMPS>;
+            key-positions = <18 19>;
+        };
+
+        colon {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <20 19>;
+        };
+
+        semi {
+            bindings = <&kp COLON>;
+            key-positions = <21 20>;
+        };
+
+        caettt {
+            bindings = <&kp CARET>;
+            key-positions = <30 31>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <31 32>;
+        };
+
+        sc {
+            bindings = <&kp SEMI>;
+            key-positions = <32 33>;
+        };
+
+        startforgottenones {
             bindings = <&kp GRAVE>;
             key-positions = <2 1>;
         };
 
-        pipe {
+        forgotten2 {
+            bindings = <&kp PERCENT>;
+            key-positions = <13 14>;
+        };
+
+        forgotten3 {
             bindings = <&kp BACKSLASH>;
             key-positions = <25 26>;
         };
