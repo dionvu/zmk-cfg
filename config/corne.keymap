@@ -73,11 +73,6 @@
             key-positions = <17 29>;
         };
 
-        colon {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
-        };
-
         semi {
             bindings = <&kp DOLLAR>;
             key-positions = <9 8>;
@@ -110,12 +105,12 @@
 
         forgotten3 {
             bindings = <&kp COLON>;
-            key-positions = <7 19>;
+            key-positions = <7 8>;
         };
 
         copy {
             bindings = <&kp LC(SEMI)>;
-            key-positions = <8 20>;
+            key-positions = <19 7>;
         };
 
         paste {
@@ -251,10 +246,10 @@
 
         main {
             bindings = <
-&trans  &kp Q               &kp W             &kp E                 &kp R                &kp T                  &kp Y              &kp U             &kp I                    &kp O              &TDQuotes               &trans
-&trans  &HRLeft LEFT_ALT A  &HRLeft LSHIFT S  &HRLeft LMETA D       &HRLeft LCTRL F      &kp G                  &kp H              &HRRight RCTRL J  &HRRight RMETA K         &HRRight RSHIFT L  &HRRight RIGHT_ALT P    &trans
-&trans  &kp Z               &kp X             &kp C                 &kp V                &kp B                  &kp N              &kp M             &kp COMMA                &kp PERIOD         &TDEclaimationQuestion  &trans
-                                              &FuncLayerL 3 ESCAPE  &FuncLayerL 2 SPACE  &FuncLayerL 3 ENTER    &FuncLayerR 1 TAB  &sk RIGHT_SHIFT   &FuncLayerR 3 BACKSPACE
+&trans  &kp Q               &kp W             &kp E                 &kp R                &kp T                  &kp Y                    &kp U             &kp I              &kp O              &TDQuotes               &trans
+&trans  &HRLeft LEFT_ALT A  &HRLeft LSHIFT S  &HRLeft LMETA D       &HRLeft LCTRL F      &kp G                  &kp H                    &HRRight RCTRL J  &HRRight RMETA K   &HRRight RSHIFT L  &HRRight RIGHT_ALT P    &trans
+&trans  &kp Z               &kp X             &kp C                 &kp V                &kp B                  &kp N                    &kp M             &kp COMMA          &kp PERIOD         &TDEclaimationQuestion  &trans
+                                              &FuncLayerL 3 ESCAPE  &FuncLayerL 2 SPACE  &FuncLayerL 3 ENTER    &FuncLayerR 1 BACKSPACE  &sk RIGHT_SHIFT   &FuncLayerR 3 TAB
             >;
         };
 
